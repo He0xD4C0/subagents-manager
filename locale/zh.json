@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Subagents Manager",
+    "description": "在会话右侧边栏排列主 Agent 和子 Agent 会话，显示运行状态并一键切换。"
+  }
+}

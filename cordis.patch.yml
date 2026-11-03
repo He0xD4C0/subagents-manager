@@ -1,0 +1,3 @@
+- insert:
+    - id: subagents-manager
+      name: '@local/subagents-manager'

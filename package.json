@@ -1,0 +1,44 @@
+{
+  "name": "@local/subagents-manager",
+  "version": "1.0.0",
+  "private": true,
+  "license": "GPL-3.0-only",
+  "author": "He0xD4C0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/He0xD4C0/subagents-manager.git"
+  },
+  "type": "module",
+  "description": "Subagents Manager: a right-sidebar rail for the main agent and its subagents, with live status and one-click switching.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
